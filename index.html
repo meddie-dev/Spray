@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="spray.png" type="image/svg+xml">
+  <title>Spray</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="container">
+    <img id="hiddenImage" src="https://imgs.search.brave.com/RbXUOCaYPXUeOe8-mkg3t2f_3euA1HzxfdfF7N2hXp0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdj/ZG4uc3RhYmxlZGlm/ZnVzaW9ud2ViLmNv/bS8yMDI0LzExLzEv/ZDI4NzRkNmUtMzM1/Zi00YThlLTliNDQt/MmYzY2Q1YzkxMjE1/LmpwZw" />
+    <canvas id="sprayCanvas"></canvas>
+    <div id="cursorPreview"></div>
+
+    <div id="progressContainer">
+      <div id="progressBar"></div>
+    </div>
+
+    <div class="sliderBox">
+      <label>Spray Radius: <span id="radiusValue">25</span></label><br>
+      <input type="range" id="radiusSlider" min="5" max="100" value="25"><br>
+      <label>Spray Strength: <span id="strengthValue">100</span></label><br>
+      <input type="range" id="strengthSlider" min="10" max="200" value="100">
+    </div>
+
+    <div class="topRightButtons" id="topRightButtons">
+      <button class="iconButton" id="resetBtn" title="Return">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828631.png" alt="Return">
+      </button>
+      <button class="iconButton" id="confettiBtn" title="Confetti">
+        <img src="https://cdn-icons-png.flaticon.com/512/3146/3146600.png" alt="Confetti">
+      </button>
+      <button class="iconButton" id="handBtn" title="Reveal More">
+        <img src="https://cdn-icons-png.flaticon.com/512/5036/5036420.png" alt="Hand Icon">
+      </button>
+    </div>
+
+    <img id="revealImage" src="hand.png" alt="Reveal" />
+    <audio id="music" src="Erika - German soldier song.mp3" preload="auto"></audio>
+    <audio id="spraySound" src="Spray Paint Sound Effect.mp3" preload="auto" loop></audio>
+
+    <div id="tutorialOverlay">
+      <div id="tutorialBox">
+        <h2>🎨 How to Use</h2>
+        <p>Art is a form of self-expression.</p>
+        <ul>
+          <li>🎯 Adjust spray size & strength using sliders</li>
+          <li>🖱️ Click and drag to spray and reveal the image</li>
+          <li>📊 Fill the bar to 60% to complete</li>
+        </ul>
+        <div id="countdownText">Please wait... 10</div>
+        <button id="startTutorialBtn">Got it!</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
